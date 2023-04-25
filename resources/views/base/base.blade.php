@@ -21,8 +21,12 @@ License: {{ theme()->getOption('product', 'license') }}
     <link rel="canonical" href="{{ ucfirst(theme()->getOption('meta', 'canonical')) }}"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <link rel="shortcut icon" href="{{ asset(theme()->getDemo() . '/' .theme()->getOption('assets', 'favicon')) }}"/>
-    <meta name="csrf-token" content="{{ csrf_token() }}">
-
+    <meta name="csrf-token" content="{{ csrf_token() }}" class="csrf-token">
+    <style>
+        .error{
+            color:red;
+        }
+    </style>
     {{-- begin::Fonts --}}
     {{ theme()->includeFonts() }}
     {{-- end::Fonts --}}
@@ -99,7 +103,13 @@ License: {{ theme()->getOption('product', 'license') }}
 @if (theme()->getViewMode() === 'preview')
     {{ theme()->getView('partials/trackers/_ga-tag-manager-for-body') }}
 @endif
-
+<script type="text/javascript">
+$.ajaxSetup({
+    headers: {
+        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+    }
+});
+</script>
 @yield('scripts')
 </body>
 {{-- end::Body --}}

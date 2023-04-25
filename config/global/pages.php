@@ -71,6 +71,19 @@ return array(
             ),
         ),
     ),
+    'task' => array(
+        'title'  => 'Task',
+        'assets' => array(
+            'custom' => array(
+                'css' => array(
+                    'plugins/custom/datatables/datatables.bundle.css',
+                ),
+                'js'  => array(
+                    'plugins/custom/datatables/datatables.bundle.js',
+                ),
+            ),
+        )
+    ),
 
     'log' => array(
         'audit'  => array(

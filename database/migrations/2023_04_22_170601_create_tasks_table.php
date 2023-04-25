@@ -15,13 +15,14 @@ class CreateTasksTable extends Migration
     {
         Schema::create('tasks', function (Blueprint $table) {
             $table->id();
-            $table->text('content');
-            $table->text('responsible_person');
-            $table->text('deadline');
-            $table->text('project_id');
-            $table->text('time_tracking');
-            $table->text('reminder');
-            $table->text('gantt');
+            $table->text('content')->nullable();
+            $table->string('responsible_person')->nullable();
+            $table->date('deadline')->nullable();
+            $table->string('project')->nullable();
+            $table->tinyinteger('time_tracking')->nullable();
+            $table->timestamp('reminder_date')->nullable();
+            $table->string('reminder_notes')->nullable();
+            $table->tinyinteger('reminder')->nullable();
             $table->timestamps();
         });
     }
