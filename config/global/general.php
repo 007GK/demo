@@ -92,9 +92,9 @@ return array(
     // Meta
     'meta'    => array(
         'title'       => 'Demo',
-        'description' => 'Metronic admin dashboard live demo. Check out all the features of the admin panel. A large number of settings, additional services and widgets.',
-        'keywords'    => 'Metronic, bootstrap, bootstrap 5, Angular 11, VueJs, React, Laravel, admin themes, web design, figma, web development, ree admin themes, bootstrap admin, bootstrap dashboard',
-        'canonical'   => 'https://preview.keenthemes.com/metronic8',
+        'description' => '',
+        'keywords'    => '',
+        'canonical'   => '',
     ),
 
     // General
