@@ -57,9 +57,10 @@ Route::middleware('auth')->group(function () {
         Route::resource('system', SystemLogsController::class)->only(['index', 'destroy']);
         Route::resource('audit', AuditLogsController::class)->only(['index', 'destroy']);
     });
+    Route::resource('task', TaskController::class);
 });
 
-Route::resource('task', TaskController::class);
+
 /**
  * Socialite login using Google service
  * https://laravel.com/docs/8.x/socialite
