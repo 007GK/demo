@@ -45,7 +45,7 @@
                         'class' => 'min-w-lg-600px flex-shrink-0',
                         'color' => 'primary',
                         'title' => 'Database Backup Process Completed!',
-                        'body' => 'Login into Metronic Admin Dashboard to make sure the data integrity is OK',
+                        'body' => 'Login into Admin Dashboard to make sure the data integrity is OK',
                         'icon' => "icons/duotune/coding/cod004.svg",
                         'button' => true,
                         'button_label' => 'Proceed'

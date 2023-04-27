@@ -121,14 +121,14 @@ class TasksTable extends DataTable
     {
         return [
             Column::make('id')->title('ID'),
-            Column::make('responsible_person'),
-            Column::make('deadline'),
+            Column::make('responsible_person')->title(__('Responsible Person')),
+            Column::make('deadline')->title(__('Deadline')),
             Column::make('project')->title(__('Project')),
-            Column::make('time_tracking')->title(__('time_tracking')),
-            Column::make('reminder_date')->title(__('reminder_date')),
-            Column::make('reminder_notes')->title(__('reminder_notes')),
-            Column::make('reminder')->title(__('reminder')),
-            Column::make('created_at'),
+            Column::make('time_tracking')->title(__('Time tracking')),
+            Column::make('reminder_date')->title(__('Reminder date')),
+            Column::make('reminder_notes')->title(__('Reminder notes')),
+            Column::make('reminder')->title(__('Reminder')),
+            Column::make('created_at')->title(__('Created at')),
             Column::computed('action')
                 ->exportable(false)
                 ->printable(false)

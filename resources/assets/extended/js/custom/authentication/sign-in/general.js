@@ -63,22 +63,9 @@ var KTSigninGeneral = function () {
                     // Simulate ajax request
                     axios.post(submitButton.closest('form').getAttribute('action'), new FormData(form))
                         .then(function (response) {
-                            // Show message popup. For more info check the plugin's official documentation: https://sweetalert2.github.io/
-                            Swal.fire({
-                                text: "You have successfully logged in!",
-                                icon: "success",
-                                buttonsStyling: false,
-                                confirmButtonText: "Ok, got it!",
-                                customClass: {
-                                    confirmButton: "btn btn-primary"
-                                }
-                            }).then(function (result) {
-                                if (result.isConfirmed) {
-                                    form.querySelector('[name="email"]').value = "";
-                                    form.querySelector('[name="password"]').value = "";
-                                    window.location.reload();
-                                }
-                            });
+                            form.querySelector('[name="email"]').value = "";
+                            form.querySelector('[name="password"]').value = "";
+                            window.location.reload();
                         })
                         .catch(function (error) {
                             let dataMessage = error.response.data.message;

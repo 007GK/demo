@@ -136,7 +136,7 @@
             <!--begin::Menu item-->
             <div class="menu-item">
                 <a href="{{ theme()->getPageUrl('index') }}" class="menu-link">
-                    <span class="menu-title">Metronic Admin</span>
+                    <span class="menu-title">Admin</span>
                     <span class="menu-badge">1,400</span>
                 </a>
             </div>
